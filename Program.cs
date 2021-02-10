@@ -56,6 +56,7 @@ namespace OpusPatcher {
 				var argstr = "\"" + args[0] + "\" \"" + args[2] + "\" \"./out.csv\" \"" + args[3] + "\"";
 				var proc2 = System.Diagnostics.Process.Start(Environment.CurrentDirectory + "/Modded Opus.exe", argstr);
 				proc2.WaitForExit();
+				Console.WriteLine("Recompilation output: " + proc2.StandardOutput.ReadToEnd());
 			}
 			Console.WriteLine("Done!");
 		}
